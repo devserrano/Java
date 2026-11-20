@@ -1,10 +1,8 @@
-package poo;
-
-import java.util.Scanner;
+package poo.encapsulamiento;
 
 public class Aritmetica {
-    int operando1;
-    int operando2;
+    private int operando1;
+    private int operando2;
 
     //Sobrecarga de constructores Constructir vacio
     public Aritmetica(){
@@ -31,19 +29,19 @@ public class Aritmetica {
         System.out.println("Resultado = " + resultado);
     }
 
+    public int getOperando1(){
+        return operando1;
+    }
 
-    public static void main(String[] args) {
+    public void setOperando1(int operando1){
+        this.operando1 = operando1;
+    }
 
-        System.out.println("Aritmetica");
-        var aritmetica = new Aritmetica(5,7);
+    public int getOperando2(){
+        return this.operando2;
+    }
 
-//        aritmetica.operando1 = 10;
-//        aritmetica.operando2 = 20;
-        aritmetica.sumar();
-        aritmetica.restar();
-        System.out.println();
-        var aritmatica2 = new Aritmetica();
-        System.out.println("Dir en memoria: " + aritmetica);
-
+    public void setOperando2(int operando2){
+        this.operando2 = operando2;
     }
 }
