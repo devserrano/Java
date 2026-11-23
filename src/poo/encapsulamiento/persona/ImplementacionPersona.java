@@ -10,5 +10,9 @@ public class ImplementacionPersona {
         System.out.println("Apellido : " + persona.getApellido());
         persona.setApellido("Ramos");
         System.out.println("Apellido nuevo: " + persona.getApellido());
+        persona.setNombre("Diego");
+
+        System.out.println("Metodo toString:");
+        System.out.println(persona); // Automaticamente se manda el metodo toString
     }
 }

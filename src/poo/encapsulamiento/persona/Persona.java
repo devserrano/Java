@@ -13,6 +13,12 @@ public class Persona {
         System.out.println("Pasando por el constructor ");
     }
 
+    @Override
+    public String toString(){
+        return "Nombre: " + this.nombre + ", Apellido: " + this.apellido + " "
+                + super.toString();
+    }
+
 
     void mostrarDetalle(){
 
