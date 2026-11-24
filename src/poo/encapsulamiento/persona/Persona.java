@@ -2,20 +2,23 @@ package poo.encapsulamiento.persona;
 
 public class Persona {
 
-
+    private static int contadorPersonas = 0;
+    private int idPersona;
     private String nombre;
     private String apellido;
 
 
-    public void persona (String nombre, String apellido) {
+    public Persona (String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        System.out.println("Pasando por el constructor ");
+        //Incrementat el atributo static
+        Persona.contadorPersonas++;
+        this.idPersona = Persona.contadorPersonas;
     }
 
     @Override
     public String toString(){
-        return "Nombre: " + this.nombre + ", Apellido: " + this.apellido + " "
+        return "id del Usuario: "+ this.idPersona + " Nombre: " + this.nombre + ", Apellido: " + this.apellido + " "
                 + super.toString();
     }
 
@@ -25,7 +28,6 @@ public class Persona {
         System.out.println("Nonbre: "+ this.nombre);
         System.out.println("Apellido: " + this.apellido);
     }
-
 
     public String getNombre(){
         return nombre;
@@ -41,6 +43,10 @@ public class Persona {
 
     public void setApellido(String apellido){
         this.apellido = apellido;
+    }
+
+    public static int getContadorPersonas(){
+        return Persona.contadorPersonas;
     }
 
 }
