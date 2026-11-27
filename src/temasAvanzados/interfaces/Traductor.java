@@ -22,7 +22,6 @@ class Ingles implements Traductor{
     }
 }
 
-
 class PruebaTraductor{
 
     public static void main(String[] args) {
@@ -30,5 +29,24 @@ class PruebaTraductor{
         Traductor traductor = new Ingles();
         traductor.traducir();
 
+
+        Traductor traductorFran = new Frances();
+        traductorFran.iniciarTraductor();
+        traductorFran.traducir();
+    }
+}
+
+class Frances implements Traductor {
+
+    @Override
+    public void traducir() {
+
+        System.out.println("Se traducir en Frances");
+
+    }
+
+    @Override
+    public void iniciarTraductor() {
+        Traductor.super.iniciarTraductor();
     }
 }
